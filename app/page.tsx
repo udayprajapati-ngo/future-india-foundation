@@ -1,5 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtime").JSX.Element {
+
+  const [loading, setLoading] = useState(false);
+
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -250,35 +256,56 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
       Contact Us
     </h2>
 
-    <form className="grid gap-6">
-      <input
-        type="text"
-        placeholder="Your Name"
-        className="border p-4 rounded-2xl"
-      />
+    <form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  className="grid gap-6"
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="0d47af21-4249-4cf4-ad7f-c144e5a05114"
+  />
 
-      <input
-        type="email"
-        placeholder="Your Email"
-        className="border p-4 rounded-2xl"
-      />
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    className="border p-4 rounded-2xl"
+    required
+  />
 
-      <input
-        type="text"
-        placeholder="Phone Number"
-        className="border p-4 rounded-2xl"
-      />
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    className="border p-4 rounded-2xl"
+    required
+  />
 
-      <textarea
-        placeholder="Your Message"
-        rows={5}
-        className="border p-4 rounded-2xl"
-      ></textarea>
+  <input
+    type="text"
+    name="phone"
+    placeholder="Phone Number"
+    className="border p-4 rounded-2xl"
+  />
 
-      <button className="bg-blue-700 text-white py-4 rounded-2xl text-xl font-semibold">
-        Send Message
-      </button>
-    </form>
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    rows={5}
+    className="border p-4 rounded-2xl"
+    required
+  ></textarea>
+
+  <button
+  type="submit"
+  disabled={loading}
+  className="bg-blue-700 text-white py-4 rounded-2xl text-xl font-semibold"
+>
+  {loading ? "Sending..." : "Send Message"}
+</button>
+</form>
   </div>
 </section>
       {/* Footer */}
