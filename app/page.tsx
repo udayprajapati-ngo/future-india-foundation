@@ -1,4 +1,4 @@
-export default function FutureIndiaFoundationWebsite() {
+export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtime").JSX.Element {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
@@ -72,7 +72,7 @@ export default function FutureIndiaFoundationWebsite() {
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-white rounded-3xl p-8 shadow-xl border hover:-translate-y-2 transition">
-              <div className="text-5xl mb-4">📚</div>
+              <div className="text-5xl mb-4">{"\u{1F4DA}"}</div>  {/* 📚 */}
               <h3 className="text-2xl font-bold mb-4">Education</h3>
               <p>
                 Free tuition, notebook distribution, scholarship guidance and digital learning support.
