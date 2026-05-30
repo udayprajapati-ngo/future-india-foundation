@@ -1,16 +1,59 @@
+import Image from "next/image";
 export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtime").JSX.Element {
   return (
     <div className="min-h-screen bg-white text-gray-800">
+      <nav className="bg-white shadow-md sticky top-0 z-50">
+  <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+
+    <div className="flex items-center gap-4">
+      <Image
+        src="/future-india-logo.png"
+        alt="Future India Foundation"
+        width={100}
+        height={100}
+      />
+      <h1 className="text-3xl font-bold text-blue-900">
+        Future India Foundation
+      </h1>
+    </div>
+
+    <div className="hidden md:flex gap-8 font-medium">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a
+  href="https://wa.me/919643005799?text=I%20want%20to%20donate"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-orange-500 text-white px-5 py-2 rounded-lg"
+>
+  Donate
+</a>
+
+  </div>
+</nav>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-700 to-orange-500 text-white py-20 px-6">
+      <section id="home" className="bg-gradient-to-r from-blue-900 via-blue-700 to-orange-500 text-white py-20 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-5xl font-bold leading-tight mb-6">
-              FUTURE INDIA FOUNDATION
-            </h1>
-            <p className="text-xl mb-6">
-              Empowering Youth, Transforming India
-            </p>
+            <div>
+
+  <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
+    🇮🇳 Registered NGO • Empowering Communities
+  </span>
+
+  <h1 className="text-5xl font-bold leading-tight mb-6">
+    FUTURE INDIA FOUNDATION
+  </h1>
+
+  <p>
+    Empowering Youth, Transforming India
+  </p>
+
+</div>
             <p className="text-lg mb-8">
               Education • Skill Development • Health & Care • Community Support
             </p>
@@ -20,9 +63,14 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
                 Join Us
               </button>
 
-              <button className="bg-orange-600 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition">
-                Donate Now
-              </button>
+              <a
+  href="https://wa.me/919643005799?text=I%20want%20to%20donate"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-orange-600 text-white px-4 py-4 rounded-2xl font-semibold text-xl shadow-lg hover:scale-105 transition"
+>
+  Donate Now
+</a>
             </div>
           </div>
 
@@ -35,9 +83,36 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
           </div>
         </div>
       </section>
+{/* Statistics Section */}
+<section className="bg-white py-12">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
 
+      <div>
+        <h3 className="text-4xl font-bold text-blue-900">200+</h3>
+        <p>Students Supported</p>
+      </div>
+
+      <div>
+        <h3 className="text-4xl font-bold text-blue-900">40+</h3>
+        <p>Villages Reached</p>
+      </div>
+
+      <div>
+        <h3 className="text-4xl font-bold text-blue-900">10+</h3>
+        <p>Health Camps</p>
+      </div>
+
+      <div>
+        <h3 className="text-4xl font-bold text-blue-900">10+</h3>
+        <p>Years of Service</p>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* About Section */}
-      <section className="py-20 px-6 bg-orange-50">
+      <section id="about" className="py-20 px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
             Support Our Mission
@@ -48,9 +123,28 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
             Help us support education, healthcare and needy families.
           </p>
 
-          <button className="bg-orange-600 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition">
-            Donate Now
-          </button>
+        <a
+  href="upi://pay?pa=prajapati.uday1@ybl&pn=Future%20India%20Foundation&cu=INR"
+  className="bg-orange-600 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition inline-block"
+>
+  Donate Now
+</a>
+
+<div className="mt-8 flex flex-col items-center">
+  <img
+    src="/upi-qr.jpeg"
+    alt="Donate via UPI"
+    className="w-64 h-64 rounded-xl shadow-lg"
+  />
+
+  <p className="mt-4 text-lg font-semibold">
+    Scan & Donate via UPI
+  </p>
+
+  <p className="text-gray-600">
+    UPI ID: prajapati.uday1@ybl
+  </p>
+</div>
         </div>
       </section>
       <section className="py-20 px-6 bg-gray-50">
@@ -66,7 +160,7 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
       </section>
 
       {/* Services */}
-      <section className="py-20 px-6">
+      <section id="services" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-14">Our Services</h2>
 
@@ -150,7 +244,7 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
           </div>
         </div>
       </section>
-<section className="py-20 px-6 bg-white">
+<section id="contact" className="py-20 px-6 bg-white">
   <div className="max-w-4xl mx-auto">
     <h2 className="text-4xl font-bold text-center mb-10">
       Contact Us
@@ -187,63 +281,68 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
     </form>
   </div>
 </section>
-      {/* Contact */}
-      <section className="py-20 px-6 bg-gray-900 text-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
-
-          <p className="text-xl mb-4">
-            FUTURE INDIA FOUNDATION
-          </p>
-
-          <p className="mb-2">Delhi, India</p>
-          <p className="mb-2">futureindiafoundation.ngo@gmail.com</p>
-          <p className="mb-8">+91-9643005599</p>
-
-          <div className="flex justify-center gap-4 flex-wrap">
-            <a
-  href="https://instagram.com/yourusername"
-  target="_blank"
-  className="bg-pink-600 px-6 py-3 rounded-2xl font-semibold text-white"
->
-  Instagram
-</a>
-
-            <a
-  href="https://facebook.com/yourusername"
-  target="_blank"
-  className="bg-blue-800 px-6 py-3 rounded-2xl font-semibold text-white"
->
-  Facebook
-</a>
-
-            <a
-  href="https://youtube.com/@yourchannel"
-  target="_blank"
-  className="bg-red-600 px-6 py-3 rounded-2xl font-semibold text-white"
->
-  YouTube
-</a>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-<footer className="bg-black text-white text-center py-6">
-  <p>
-    © 2026 Future India Foundation | All Rights Reserved
-  </p>
+<footer className="bg-blue-900 text-white py-10 px-6">
+  <div className="max-w-6xl mx-auto text-center">
+
+    <h2 className="text-4xl font-bold mb-6">
+  Connect With Us
+</h2>
+
+    <h3 className="text-2xl font-bold mb-4">
+      Future India Foundation
+    </h3>
+
+    <p className="mb-2">📍 India</p>
+    <p className="mb-2">✉ futureindiafoundation.ngo@gmail.com</p>
+    <p className="mb-4">📞 +91 9643005599</p>
+
+    {/* Social Media Buttons */}
+    <div className="flex justify-center gap-4 flex-wrap mb-6">
+      <a
+        href="https://instagram.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-pink-600 px-6 py-3 rounded-2xl font-semibold text-white hover:bg-pink-700 transition"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://facebook.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-blue-700 px-6 py-3 rounded-2xl font-semibold text-white hover:bg-blue-800 transition"
+      >
+        Facebook
+      </a>
+
+      <a
+        href="https://youtube.com/@yourchannel"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-red-600 px-6 py-3 rounded-2xl font-semibold text-white hover:bg-red-700 transition"
+      >
+        YouTube
+      </a>
+    </div>
+
+    <div className="border-t border-blue-700 mt-6 pt-6">
+      <p>© 2026 Future India Foundation. All Rights Reserved.</p>
+    </div>
+
+  </div>
 </footer>
 
 {/* WhatsApp Button */}
 <a
   href="https://wa.me/919643005599"
   target="_blank"
+  rel="noopener noreferrer"
   className="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-4 rounded-full shadow-2xl hover:scale-110 transition"
 >
   WhatsApp
 </a>
-
 </div>
 );
 }
