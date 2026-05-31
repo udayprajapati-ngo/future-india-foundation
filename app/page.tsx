@@ -8,6 +8,12 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
+      {/* Live Notice Bar */}
+<div className="bg-orange-600 text-white py-2 overflow-hidden">
+  <marquee behavior="scroll" direction="left">
+    🇮🇳 Future India Foundation welcomes volunteers, interns and donors • Join our mission to empower youth and transform India • Donate Now •📞 Contact: +91 9643005599 ✉ futureindiafoundation.ngo@gmail.com 📍India Delhi -110088 
+  </marquee>
+</div>
       <nav className="bg-white shadow-md sticky top-0 z-50">
   <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
 
@@ -65,15 +71,17 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
             </p>
 
             <div className="flex gap-4 flex-wrap">
-              <button className="bg-white text-blue-900 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition">
-                Join Us
-              </button>
-
+              <a
+  href="#join-us"
+  className="bg-white text-blue-900 px-6 py-4 rounded-2xl font-semibold text-xl shadow-lg hover:scale-105 transition"
+>
+  Join Us
+</a>
               <a
   href="https://wa.me/919643005799?text=I%20want%20to%20donate"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-orange-600 text-white px-4 py-4 rounded-2xl font-semibold text-xl shadow-lg hover:scale-105 transition"
+  className="bg-orange-600 text-white px-4 py-4 rounded-2xl font-semibold text-2xl shadow-lg hover:scale-105 transition"
 >
   Donate Now
 </a>
@@ -228,45 +236,102 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
       </section>
 
       {/* Gallery */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-14">Our Activities</h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <img
-              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
-              className="rounded-3xl shadow-xl h-72 w-full object-cover"
-            />
-
-            <img
-              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop"
-              className="rounded-3xl shadow-xl h-72 w-full object-cover"
-            />
-
-            <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop"
-              className="rounded-3xl shadow-xl h-72 w-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-<section id="contact" className="py-20 px-6 bg-white">
+        <section id="join-us" className="py-20 px-6 bg-gray-50">
   <div className="max-w-4xl mx-auto">
     <h2 className="text-4xl font-bold text-center mb-10">
-      Contact Us
+      Join Us
     </h2>
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      className="grid gap-6"
+    >
+      <input
+        type="hidden"
+        name="access_key"
+        value="0d47af21-4249-4cf4-ad7f-c144e5a05114"
+      />
+      <input
+        type="text"
+        name="full_name"
+        placeholder="Full Name"
+        className="border p-4 rounded-2xl"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        className="border p-4 rounded-2xl"
+        required
+      />
+      <input
+        type="text"
+        name="phone"
+        placeholder="Phone Number"
+        className="border p-4 rounded-2xl"
+        required
+      />
 
+      <input
+        type="text"
+        name="city"
+        placeholder="City"
+        className="border p-4 rounded-2xl"
+      />
+
+      <select
+        name="purpose"
+        className="border p-4 rounded-2xl"
+        required
+      >
+        <option value="">Select Purpose</option>
+        <option>Volunteer</option>
+        <option>Internship</option>
+        <option>Social Work</option>
+        <option>Education Program</option>
+        <option>Skill Development</option>
+        <option>Donate & Support</option>
+        <option>Other</option>
+      </select>
+
+      <textarea
+        name="message"
+        placeholder="Why do you want to join Future India Foundation?"
+        rows={5}
+        className="border p-4 rounded-2xl"
+        required
+      ></textarea>
+
+      <button
+        type="submit"
+        className="bg-orange-600 text-white py-4 rounded-2xl text-xl font-semibold"
+      >
+        Join Now
+      </button>
+    </form>
+  </div>
+</section>
+<section id="contact" className="py-5 px-4 bg-white">
+  <div className="max-w-2xl mx-auto">
+<h2 className="text-4xl font-bold text-center mb-10">
+  Contact Us
+</h2>
     <form
   action="https://api.web3forms.com/submit"
   method="POST"
   className="grid gap-6"
 >
   <input
-    type="hidden"
-    name="access_key"
-    value="0d47af21-4249-4cf4-ad7f-c144e5a05114"
+  type="hidden"
+  name="redirect"
+  value="https://web3forms.com/success"
   />
-
+<input
+  type="hidden"
+  name="access_key"
+  value="0d47af21-4249-4cf4-ad7f-c144e5a05114"
+/>
   <input
     type="text"
     name="name"
@@ -300,10 +365,9 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
 
   <button
   type="submit"
-  disabled={loading}
   className="bg-blue-700 text-white py-4 rounded-2xl text-xl font-semibold"
 >
-  {loading ? "Sending..." : "Send Message"}
+  Send Message
 </button>
 </form>
   </div>
