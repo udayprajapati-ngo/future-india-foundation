@@ -11,17 +11,20 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
     <div className="min-h-screen bg-white text-gray-800">
 
     {/* Live Notice Bar */}
-    <div className="sticky top-0 z-[60] bg-orange-600 text-white h-10 overflow-hidden flex items-center">
-      <div className="bg-red-700 px-5 font-bold h-full flex items-center">
-        🔴 LIVE
-      </div>
+<div className="sticky top-0 z-[60] bg-orange-600 text-white h-10 overflow-hidden flex items-center">
+  
+  <div className="bg-red-700 px-5 font-bold h-full flex items-center gap-2">
+    <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-[0_0_15px_#22c55e]"></span>
+    LIVE
+  </div>
 
-      <div className="flex-1 overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap font-medium">
-          🇮🇳 Future India Foundation welcomes volunteers, interns and donors • Join our mission to empower youth and transform India • Donate Now •📞 Contact: +91 9643005599 ✉ futureindiafoundation.ngo@gmail.com 📍India Delhi -110088
-        </div>
-      </div>
+  <div className="flex-1 overflow-hidden">
+    <div className="animate-marquee whitespace-nowrap font-medium">
+      🇮🇳 Future India Foundation welcomes volunteers • Internship Program Open • Donate for Education • Join Our Mission • Skill Development Program Running • Health Camp Registration Open
     </div>
+  </div>
+
+</div>
 
       <nav className="bg-white shadow-md fixed top-10 left-0 w-full z-40">
   <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
