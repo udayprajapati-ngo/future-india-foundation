@@ -3,13 +3,11 @@
 import Image from "next/image";
 import { useState } from "react";
 export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtime").JSX.Element {
-
   const [loading, setLoading] = useState(false);
-
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Live Notice Bar */}
-<div className="bg-orange-600 text-white overflow-hidden">
+<div className="sticky top-0 z-[999] bg-orange-600 text-white overflow-hidden whitespace-nowrap">
   <div className="flex">
     <div className="bg-red-700 px-4 py-2 font-bold shrink-0">
       LIVE
@@ -18,21 +16,22 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
     <div className="relative overflow-hidden w-full">
       <div className="animate-ticker whitespace-nowrap py-2 font-semibold">
         🇮🇳 Future India Foundation welcomes volunteers • Internship Open • Donate for Education • Health Camp Support • Join Our Mission • Empowering Youth & Communities Across India Donate Now •📞 Contact: +91 9643005599 ✉ futureindiafoundation.ngo@gmail.com 📍India Delhi -110088
+        
       </div>
     </div>
   </div>
 </div>
-      <nav className="bg-white shadow-md sticky top-0 z-50">
+      <nav className="bg-white shadow-md fixed top-10 left-0 w-full z-40">
   <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
 
     <div className="flex items-center gap-4">
       <Image
         src="/future-india-logo.png"
         alt="Future India Foundation"
-        width={100}
-        height={100}
+        width={80}
+        height={80}
       />
-      <h1 className="text-3xl font-bold text-blue-900">
+      <h1 className="text-2xl font-bold text-blue-900">
         Future India Foundation
       </h1>
     </div>
