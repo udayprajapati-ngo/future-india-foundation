@@ -2,25 +2,27 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { BookOpen, Laptop, HeartHandshake, Handshake } from "lucide-react";
 export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtime").JSX.Element {
+
   const [loading, setLoading] = useState(false);
+
   return (
     <div className="min-h-screen bg-white text-gray-800">
-      {/* Live Notice Bar */}
-<div className="sticky top-0 z-[999] bg-orange-600 text-white overflow-hidden whitespace-nowrap">
-  <div className="flex">
-    <div className="bg-red-700 px-4 py-2 font-bold shrink-0">
-      LIVE
-    </div>
 
-    <div className="relative overflow-hidden w-full">
-      <div className="animate-ticker whitespace-nowrap py-2 font-semibold">
-        🇮🇳 Future India Foundation welcomes volunteers • Internship Open • Donate for Education • Health Camp Support • Join Our Mission • Empowering Youth & Communities Across India Donate Now •📞 Contact: +91 9643005599 ✉ futureindiafoundation.ngo@gmail.com 📍India Delhi -110088
-        
+    {/* Live Notice Bar */}
+    <div className="sticky top-0 z-[60] bg-orange-600 text-white h-10 overflow-hidden flex items-center">
+      <div className="bg-red-700 px-5 font-bold h-full flex items-center">
+        🔴 LIVE
+      </div>
+
+      <div className="flex-1 overflow-hidden">
+        <div className="animate-marquee whitespace-nowrap font-medium">
+          🇮🇳 Future India Foundation welcomes volunteers, interns and donors • Join our mission to empower youth and transform India • Donate Now •📞 Contact: +91 9643005599 ✉ futureindiafoundation.ngo@gmail.com 📍India Delhi -110088
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
       <nav className="bg-white shadow-md fixed top-10 left-0 w-full z-40">
   <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
 
@@ -187,7 +189,7 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-white rounded-3xl p-8 shadow-xl border hover:-translate-y-2 transition">
-              <div className="text-5xl mb-4">{"\u{1F4DA}"}</div>  {/* 📚 */}
+              <BookOpen size={70} className="text-blue-600 animate-bounce" />
               <h3 className="text-2xl font-bold mb-4">Education</h3>
               <p>
                 Free tuition, notebook distribution, scholarship guidance and digital learning support.
@@ -195,7 +197,7 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-xl border hover:-translate-y-2 transition">
-              <div className="text-5xl mb-4">💻</div>
+              <Laptop size={70} className="text-orange-500 animate-bounce" />
               <h3 className="text-2xl font-bold mb-4">Skill Development</h3>
               <p>
                 Computer training, spoken English, job guidance and digital skills programs.
@@ -203,7 +205,7 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-xl border hover:-translate-y-2 transition">
-              <div className="text-5xl mb-4">❤️</div>
+              <HeartHandshake size={70} className="text-red-500 animate-bounce" />
               <h3 className="text-2xl font-bold mb-4">Health Support</h3>
               <p>
                 Free medical camps, blood donation drives and medicine support for needy people.
@@ -211,7 +213,7 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-xl border hover:-translate-y-2 transition">
-              <div className="text-5xl mb-4">🤝</div>
+              <Handshake size={70} className="text-green-600 animate-bounce" />
               <h3 className="text-2xl font-bold mb-4">Social Welfare</h3>
               <p>
                 Food distribution, clothes donation, community support and emergency help.
@@ -407,7 +409,7 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
       </a>
 
       <a
-        href="https://facebook.com/yourusername"
+        href="https://www.facebook.com/profile.php?id=61590201223723"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-blue-700 px-6 py-3 rounded-2xl font-semibold text-white hover:bg-blue-800 transition"
