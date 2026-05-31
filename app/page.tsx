@@ -10,9 +10,9 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
     <div className="min-h-screen bg-white text-gray-800">
       {/* Live Notice Bar */}
 <div className="bg-orange-600 text-white py-2 overflow-hidden">
-  <marquee behavior="scroll" direction="left">
+  <div className="whitespace-nowrap animate-pulse text-center font-semibold">
     🇮🇳 Future India Foundation welcomes volunteers, interns and donors • Join our mission to empower youth and transform India • Donate Now •📞 Contact: +91 9643005599 ✉ futureindiafoundation.ngo@gmail.com 📍India Delhi - 110088 
-  </marquee>
+  </div>
 </div>
       <nav className="bg-white shadow-md sticky top-0 z-50">
   <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
