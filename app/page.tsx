@@ -20,7 +20,8 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
 
   <div className="flex-1 overflow-hidden">
     <div className="animate-marquee whitespace-nowrap font-medium">
-      🇮🇳 Future India Foundation welcomes volunteers • Internship Program Open • Donate for Education • Join Our Mission • Skill Development Program Running • Health Camp Registration Open
+      🇮🇳 Future India Foundation welcomes volunteers, interns and donors • Join our mission to empower youth and transform India • Donate Now •📞 Contact: +91 9643005599 ✉ futureindiafoundation.ngo@gmail.com 📍India Delhi -110088 
+
     </div>
   </div>
 
@@ -403,7 +404,7 @@ export default function FutureIndiaFoundationWebsite(): import("react/jsx-runtim
     {/* Social Media Buttons */}
     <div className="flex justify-center gap-4 flex-wrap mb-6">
       <a
-        href="https://instagram.com/yourusername"
+        href="https://www.instagram.com/futureindiafoundation_org/"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-pink-600 px-6 py-3 rounded-2xl font-semibold text-white hover:bg-pink-700 transition"
